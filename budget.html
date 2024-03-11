@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Manager</title>
+    <link rel="stylesheet" href="dash.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #fcfbfe;
+      }
+      footer {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="d-flex">
+    <div class="container-fluid mobile d-block d-sm-none">
+      <header class="mt-4 d-flex justify-content-between align-items-center">
+        <i id="backIcon" class="fas fa-angle-left" style="font-size: 25px"></i>
+        <h5 class="mb-0 fw-bold">Monthly Budget</h5>
+        <input
+          class="btn fw-bold"
+          style="
+            border-radius: 13px;
+            width: 70px;
+            background-color: #ebe7f7;
+            color: #6950c1;
+          "
+          type="button"
+          value="Edit"
+        />
+      </header>
+      <div class="progressbar p-4 mt-3">
+        <img src="img/progressbar.png" style="width: 100%" alt="" />
+      </div>
+      <div class="d-flex justify-content-evenly mt-2">
+        <article class="d-flex">
+          <div>
+            <i
+              class="fas fa-wallet fs-3 p-3 rounded-4"
+              style="background-color: #d6d7e8"
+            ></i>
+          </div>
+          <div class="ms-3">
+            <h3 class="mb-1"><span>&euro;</span>30</h3>
+            <h6 style="color: #abbac7">Left today</h6>
+          </div>
+        </article>
+        <article class="d-flex">
+          <div>
+            <i
+              class="fas fa-money-bill-wave fs-3 p-3 rounded-4"
+              style="background-color: #d6d7e8"
+            ></i>
+          </div>
+          <div class="ms-3">
+            <h3 class="mb-1"><span>&euro;</span>128</h3>
+            <h6 style="color: #abbac7">Spent today</h6>
+          </div>
+        </article>
+      </div>
+      <div
+        class="bg-white mt-5 exp"
+        style="border-top-left-radius: 20px; border-top-right-radius: 20px"
+      >
+        <header class="d-flex justify-content-between p-4">
+          <h3>Expenses</h3>
+          <h5 style="color: #5d43bd">
+            View all
+            <span
+              ><i class="fas fa-angle-right" style="font-size: 24px"></i>
+            </span>
+          </h5>
+        </header>
+        <div class="row px-5 mt-2">
+          <div
+            class="col btn rounded-5 me-1 havb"
+            style="background-color: #f6f6f6"
+          >
+            Today
+          </div>
+          <div
+            class="col btn rounded-5 me-1 havb"
+            style="background-color: #f6f6f6"
+          >
+            1W
+          </div>
+          <div
+            class="col btn rounded-5 me-1 havb"
+            style="background-color: #f6f6f6"
+          >
+            1M
+          </div>
+          <div
+            class="col btn rounded-5 me-1 havb"
+            style="background-color: #f6f6f6"
+          >
+            1Y
+          </div>
+        </div>
+        <div class="row my-3 mt-4 ms-2">
+          <div
+            class="col mx-2"
+            style="background-color: #2c5fcc; border-radius: 20px"
+          >
+            <p class="text-start my-5 rounded-5 row mt-4">
+              <i class="text-white fas fa-shopping-basket fs-1"></i>
+            </p>
+            <p class="row ps-3 my-0 text-white fs-15 text-start">Groceries</p>
+            <p class="mt-1 my-0 ps-3 row text-white text-start fw-bold fs-3">
+              $86.00
+            </p>
+          </div>
+          <div
+            class="col mx-2"
+            style="background-color: #3d3ca8; border-radius: 20px"
+          >
+            <p class="text-start my-5 rounded-5 row mt-4">
+              <i class="text-white fas fa-concierge-bell fs-1"></i>
+            </p>
+            <p class="row ps-3 my-0 text-white fs-15 text-start">Restaurants</p>
+            <p
+              class="mt-1 my-3 mt-0 ps-3 row text-white text-start fw-bold fs-3"
+            >
+              $18.80
+            </p>
+          </div>
+          <div
+            class="col mx-2"
+            style="background-color: #8946c4; border-radius: 20px"
+          >
+            <p class="text-start my-5 rounded-5 row mt-4 text-white">
+              <i class="fas fa-tshirt fs-1"></i>
+            </p>
+            <p class="row ps-3 my-0 fs-15 text-white text-start">Fashion</p>
+            <p class="mt-1 my-0 ps-3 row text-white text-start fw-bold fs-3">
+              $23.20
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer class="navbar bg-white d-sm-none fixed-bottom">
+        <div class="container-fluid">
+          <form action="dash.html">
+            <button type="submit" class="btn fs-3">
+              <span class="fas fa-home"></span>
+            </button>
+          </form>
+          <form action="">
+            <button type="submit" class="btn fs-3">
+              <span class="far fa-address-card text-body-secondary"></span>
+            </button>
+          </form>
+          <form action="budget.html">
+            <button type="submit" class="btn fs-3">
+              <span class="fas fa-piggy-bank text-body-secondary"></span>
+            </button>
+          </form>
+          <form action="">
+            <button type="submit" class="btn fs-3">
+              <span class="fas fa-heartbeat text-body-secondary"></span>
+            </button>
+          </form>
+        </div>
+      </footer>
+    </div>
+    <script>document.getElementById("backIcon").addEventListener("click", function() {
+        window.location.href = "dash.html"; 
+      });</script>
+  </body>
+</html>
